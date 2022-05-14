@@ -1,0 +1,131 @@
+.block-services {
+  background: $cg2;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba($cb, .25);
+
+  @include from (lg) {
+    background: transparent;
+    border-radius: 25px;
+    margin: 0 22px;
+    max-width: 1396px;
+    position: relative;
+
+      &::after {
+        background: $cp1;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 50px;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        z-index: -100;
+      }
+
+      &::before {
+        border-radius: 75px;
+        border: 5px dashed $cp1;
+        bottom: 31px;
+        content: '';
+        left: 12px;
+        position: absolute;
+        right: 12px;
+        top: 31px;
+      }
+  }
+
+  @include from (xl) {
+    margin: 0 auto;;
+  }
+  
+  &__container {
+    margin: 0 auto 69px auto;
+    max-width: 325px;
+    padding: 28px 20px;
+
+    @include from (lg) {
+      align-items: center;
+      display: grid;
+      grid-column-gap: 60px;
+      grid-template-columns: 50% 50%;
+      margin: 0 auto 98px auto;
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    color: $cp3;
+    margin-bottom: 16px;
+    z-index: 400;
+
+    @include from (lg) {
+      background: $cw;
+      border-radius: 100px;
+      box-shadow: 0px 4px 4px rgba($cb, .25);
+      color: $cb;
+      margin-left: 90px;
+      padding: 18px 34px;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-row-gap: 23px;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    @include from (lg) {
+      padding: 20px;
+    }
+    
+    &:before {
+      background: $cg3;
+      content: '';
+      height: 100%;
+      left: calc(44%);
+      position: absolute;
+      top: 0;
+      width: 1px;
+
+      @include from (lg) {
+        content: initial;
+      }
+    }
+
+    &__item {
+      @include from (lg) {
+        color: $cw;
+        position: relative;
+
+        &::before {
+          border-color: $cw;
+          border-style: solid;
+          border-width: 0 0 2px 2px;
+          content: "";
+          display: block;
+          height: 11px;
+          position: absolute;
+          right: calc(100% + 18px);
+          top: 0;
+          transform: rotate( -135deg );
+          width: 11px;
+        }
+
+        &::after {
+          background: $cw;
+          content: "";
+          display: block;
+          height: 2px;
+          position: absolute;
+          right: calc(100% + 18px);
+          top: 4px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

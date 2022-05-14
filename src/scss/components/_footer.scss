@@ -1,0 +1,93 @@
+.footer {
+  @include from(lg) {
+    margin-bottom: 94px;
+  }
+
+  &__container {
+    padding: 60px 0;
+    border-bottom: 5px solid $cp1;
+    border-top: 5px solid $cp1;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+
+    @include from(lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 10px;
+    color: $cg1;
+  }
+
+  &__link {
+    a {
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: 0.015em;
+    }
+  }
+
+  &__logo {
+    max-width: 216px;
+    margin-bottom: 40px;
+
+    @include from(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__us {
+    margin-bottom: 30px;
+
+    @include from(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__help {
+    margin-bottom: 30px;
+
+    @include from(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 30px;
+
+    @include from(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__social-media {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      max-width: 140px;
+      margin: 0 auto;
+
+      @include from(lg) {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        padding: 10px 5px;
+      }
+    }
+
+    &__icon {
+      height: 36px;
+      width: 36px;
+      transition: ease all .3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

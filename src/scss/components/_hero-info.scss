@@ -1,0 +1,80 @@
+.hero-info {
+  margin-top: 40px;
+  margin-bottom: 80px;
+
+  @include from (md) {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    max-width: 331px;
+    margin: 0 auto;
+
+    @include from(md) {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      align-items: center;
+      column-gap: 10%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    @include from (md) {
+      text-align: left;
+    }
+
+    &--dot {
+      position: relative;
+      &::after {
+        content: '';
+        background: $cp1;
+        height: 107px;
+        width: 107px;
+        position: absolute;
+        bottom: -15px;
+        left: calc(50% - 130px);
+        z-index: -1;
+        border-radius: 50%;
+
+        @include from(md) {
+          content: none;
+        }
+      }
+    }
+  }
+  &__paragraph {
+    text-align: center;
+    padding-top: 27px;
+
+    @include from (md) {
+      text-align: left;
+    }
+  }
+
+  &__image {
+    padding-top: 27px;
+    z-index: -100;
+
+    &--mobile {
+      @include from (md) {
+        display: none;
+      }
+    }
+    &--desktop {
+      display: none;
+      @include from (md) {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    margin: -40px auto 0 auto;
+    position: relative;
+    @include from (md) {
+      margin: 24px auto 0 auto;
+    }
+  }
+}

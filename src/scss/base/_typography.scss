@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.heading-1 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+}
+
+.heading-2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.015em;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.015em;
+}
+
+.paragraph-2 {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 160%;
+  color: $cg1;
+}
+
+.list {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.005em;
+}

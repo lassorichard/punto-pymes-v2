@@ -1,0 +1,98 @@
+.block-info {
+  margin-bottom: 70px;
+
+  @include from (md) {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    @include from (md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+  &__figure {
+    
+    &__image {
+      display: none;
+
+      @include from (md) {
+        display: inherit;
+      }
+    }
+    &--mobile {
+      background: $cp3;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 100px;
+      margin-bottom: 23px;
+      padding: 15px 15px 64px 15px;
+      
+      @include from (md) {
+        display: none;
+      }
+      &__image {
+        border-radius: 32px;
+        box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
+        transform: scale(1.15);
+        width: 100%;
+      }
+    }
+    
+    &__title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+  }
+
+  &__content {
+
+    &::before {
+      @include from (md) {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 198px;
+        width: 178px;
+        background: $cp3;
+        border-radius: 0 0 0 100px;
+        z-index: -1;
+      }
+    }
+
+    @include from (md) {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 80px 30px;
+      position: relative;
+    }
+
+    @include from (lg) {
+      padding: 80px 70px;
+    }
+
+    &__title {
+      display: none;
+
+      @include from (md) {
+        display: inherit;
+        text-align: center;
+        margin-bottom: 26px;
+      }
+    }
+    &__text {
+      text-align: center;
+      margin-bottom: 23px;
+
+      @include from (md) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__button {
+      margin: 0 auto;
+    }
+  }
+}
