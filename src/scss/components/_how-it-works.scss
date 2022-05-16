@@ -21,7 +21,7 @@
     }
   }
 
-  &__cards {
+  &__cards {
     @include from(md) {
       display: grid;
       grid-template-columns: 1fr 1fr;

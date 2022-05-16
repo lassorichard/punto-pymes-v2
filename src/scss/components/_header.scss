@@ -52,7 +52,7 @@
       left: 0;
       position: absolute;
       top: 0;
-      transform: translateY(-100%);
+      // transform: translateY(-100%);
       transition: ease all .5s;
       width: 217px;
       z-index: 600;
@@ -67,7 +67,7 @@
 
       &__item {
         color: $cg1;
-        
+
         &__li {
           padding: 16px;
           border-bottom: 1px solid $cg4;
