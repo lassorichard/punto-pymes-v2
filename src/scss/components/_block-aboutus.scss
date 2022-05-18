@@ -1,0 +1,116 @@
+.block-aboutus {
+  &__container {
+    @include from(md) {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    @include from(lg) {
+      column-gap: 30px;
+      align-items: center;
+    }
+  }
+
+  &__img-wrapper {
+    background: $cp3;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 100px;
+    margin-bottom: 23px;
+    padding: 15px 15px 64px 15px;
+
+    @include from(md) {
+      background: initial;
+    }
+
+    &__title {
+      text-align: center;
+      padding: 30px 0;
+
+      &--mobile {
+        @include from(md) {
+          display: none;
+        }
+      }
+    }
+
+    &__img {
+      border-radius: 32px;
+      box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
+      transform: scale(1.15);
+      width: 100%;
+
+      @include from(md) {
+        transform: initial;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include from(md) {
+      position: relative;
+
+      &::before {
+        @include from(md) {
+          background-color: $cp3;
+          border-bottom-right-radius: 100px;
+          content: '';
+          height: 200px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 180px;
+          z-index: -1;
+        }
+      }
+
+      &::after {
+        @include from(md) {
+          content: '';
+          position: absolute;
+          top: -40px;
+          right: 0;
+          width: 130px;
+          height: 70px;
+          border-top-left-radius: 110px;
+          border-top-right-radius: 110px;
+          border: 10px solid $cp3;
+          border-bottom: 0;
+          transform: rotate(180deg);
+        }
+        @include from(lg) {
+          right: 50px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    &--desktop {
+      display: none;
+
+      @include from(md) {
+        display: block;
+        padding: 20px 40px 60px;
+      }
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include from(md) {
+      text-align: left;
+      padding: 40px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto 15px;
+
+    @include from(md) {
+      max-width: 300px;
+    }
+  }
+}

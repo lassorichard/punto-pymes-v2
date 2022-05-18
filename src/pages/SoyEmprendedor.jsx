@@ -21,7 +21,7 @@ export const SoyEmprendedor = () => {
         desktopImage={ EmprendedoresDesktop }
       />
       <BlockInfo
-        title='Servicio para Emprendedores'
+        title='¿Qué podés encontrar?'
         title2='¿Qué podés encontrar?'
         paragraph="Our Business Plan is a written document describing a company's core business activites, Objectives, and how it plans to achieve its goals. Our goal is to provide our client high quality Product with modern idea accordingly their budgets and according thir reuirements."
         mobileImage={ EmprendedoresMobile2 }
@@ -29,7 +29,9 @@ export const SoyEmprendedor = () => {
       />
       <BlockServices />
       <HowItWorks />
-      <Register />
+      <Register
+        title='¿Querés asesorarte con un Freelancer?'
+      />
     </>
   )
 }

@@ -16,13 +16,16 @@ export const Header = () => {
 
   const openMenu = () => {
     setMenuOpen(true);
+    document.body.style.overflow = "hidden"
   }
 
   const closeMenu = () => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
       setMenuOpen(true);
+      document.body.style.overflow = "hidden"
     } else {
       setMenuOpen(false);
+      document.body.style.overflow = "scroll"
 
     }
   }

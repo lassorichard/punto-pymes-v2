@@ -1,0 +1,108 @@
+.carousel {
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include from (md) {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__slide {
+    @include from (md) {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    @include from (lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 40px;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+
+      @include from (md) {
+        text-align: left;
+      }
+    }
+
+    &__paragraph {
+      margin-bottom: 20px;
+      text-align: center;
+
+      @include from (md) {
+        text-align: left;
+      }
+    }
+
+    &__image-static {
+      display: none !important;
+
+      @include from (lg) {
+        display: block !important;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+.slick-slider {
+
+  .slick-dots {
+    li button:before {
+      font-size: 16px;
+      color: $cg5;
+      opacity: initial;
+    }
+
+    li.slick-active button:before {
+      color: $cp3;
+    }
+  }
+
+  .slick-prev {
+    left: -20px;
+
+    @include from (md) {
+      left: -10px;
+    }
+
+    @include from (lg) {
+      left: -45px;
+    }
+  }
+
+  .slick-next {
+    right: -20px;
+
+    @include from (md) {
+      right: -10px;
+    }
+
+    @include from (lg) {
+      right: -45px;
+    }
+  }
+
+  .slick-prev:before, .slick-next:before {
+    content: '';
+    border: solid $cp3;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 9px;
+  }
+
+  .slick-prev:before {
+    transform: rotate(135deg);
+  }
+
+  .slick-next:before {
+    transform: rotate(-45deg);
+  }
+}

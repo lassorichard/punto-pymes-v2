@@ -1,0 +1,20 @@
+.block-aboutus--reverse {
+  .block-aboutus {
+    &__container {
+      align-items: center;
+    }
+
+    &__img-wrapper {
+      background: none;
+
+      @include from (md) {
+        order: 1;
+      }
+    }
+
+    &__wrapper::before,
+    &__wrapper::after {
+      content: none;
+    }
+  }
+}

@@ -9,11 +9,11 @@ export const Footer = () => {
 
   return (
     <>
-      <footer class="footer">
-        <div class="footer__container container">
-          <img class="footer__logo" src={Logo} alt="Logo Punto Pymes"></img>
-          <ul class="footer__us">
-            <h4 class="footer__title">Nosotros</h4>
+      <footer className="footer">
+        <div className="footer__container container">
+          <img className="footer__logo" src={Logo} alt="Logo Punto Pymes"></img>
+          <ul className="footer__us">
+            <h4 className="footer__title">Nosotros</h4>
             <li className="footer__link">
               <NavLink to="/nosotros">Quienes somos</NavLink>
             </li>
@@ -24,8 +24,8 @@ export const Footer = () => {
               <NavLink to="/como-funciona">Cómo funciona</NavLink>
             </li>
           </ul>
-          <ul class="footer__help">
-            <h4 class="footer__title">Ayuda</h4>
+          <ul className="footer__help">
+            <h4 className="footer__title">Ayuda</h4>
             <li className="footer__link">
               <NavLink to="/faq">FAQ</NavLink>
             </li>
@@ -33,8 +33,8 @@ export const Footer = () => {
               <NavLink to="/terminos-condiciones">Términos y condiciones</NavLink>
             </li>
           </ul>
-          <ul class="footer__help">
-            <h4 class="footer__title">Contacto</h4>
+          <ul className="footer__help">
+            <h4 className="footer__title">Contacto</h4>
             <li className="footer__link">
               <Link to="#">Email</Link>
             </li>
@@ -42,11 +42,11 @@ export const Footer = () => {
               <Link to="#">Whatsapp</Link>
             </li>
           </ul>
-          <div class="footer__social-media">
-            <h4 class="footer__title">
+          <div className="footer__social-media">
+            <h4 className="footer__title">
               Seguinos en redes
             </h4>
-            <div class="footer__social-media__container">
+            <div className="footer__social-media__container">
               <Link to="#" className="footer__social-media__icon">
                 <img src={Facebook} alt="Icono de Facebook"></img>
               </Link>

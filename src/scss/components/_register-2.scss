@@ -1,0 +1,55 @@
+.register--2 {
+  .register {
+    &__box {
+      @include from (md) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+      }
+
+      @include from (lg) {
+        grid-template-columns: 60% 40%;
+      }
+
+      &__text {
+        margin-bottom: 30px;
+
+        @include from (md) {
+          text-align: left;
+          padding: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      &__paragraph {
+        font-size: 24px;
+        padding: 0 20px;
+
+        @include from (md) {
+          padding: 0;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+
+        &--mobile {
+          margin-bottom: 30px;
+          @include from (md) {
+            display: none;
+          }
+        }
+
+        &--desktop {
+          display: none;
+
+          @include from (md) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &__button:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
