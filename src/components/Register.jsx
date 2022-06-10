@@ -1,5 +1,6 @@
+import { Button } from "./Button"
 
-export const Register = ({title}) => {
+export const Register = ({ title }) => {
 
   return (
     <>
@@ -9,7 +10,12 @@ export const Register = ({title}) => {
             <h2 className="register__box__text heading-2">
               {title}
             </h2>
-            <button className="btn btn--secondary register__button">Registrarme</button>
+            <Button
+              title='Registrarme'
+              linkExternal='https://docs.google.com/forms/d/1onnjtCKG24APUcgJPTPoCxnBlo56D8fGi6Swlc49SBg/edit'
+              type='secondary'
+              className={'register__button'}
+            />
           </div>
         </div>
       </section>

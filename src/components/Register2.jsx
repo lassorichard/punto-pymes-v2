@@ -1,3 +1,4 @@
+import { Button } from "./Button"
 
 export const Register2 = () => {
 
@@ -16,8 +17,18 @@ export const Register2 = () => {
               Accedé al formulario de tu interés
             </p>
             <div>
-              <button className="btn btn--secondary register__button">Soy Emprendedor</button>
-              <button className="btn btn--secondary register__button">Ofrecer servicios</button>
+              <Button
+                title='Soy Emprendedor'
+                linkExternal='https://docs.google.com/forms/d/1onnjtCKG24APUcgJPTPoCxnBlo56D8fGi6Swlc49SBg/edit'
+                type='secondary'
+                className='register__button'
+              />
+              <Button
+                title='Ofrecer servicios'
+                linkExternal='https://docs.google.com/forms/d/1onnjtCKG24APUcgJPTPoCxnBlo56D8fGi6Swlc49SBg/edit'
+                type='secondary'
+                className='register__button'
+              />
             </div>
           </div>
         </div>

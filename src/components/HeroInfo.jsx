@@ -1,3 +1,4 @@
+import { Button } from "./Button"
 
 export const HeroInfo = ({ title, paragraph, mobileImage, desktopImage }) => {
 
@@ -13,9 +14,13 @@ export const HeroInfo = ({ title, paragraph, mobileImage, desktopImage }) => {
               {paragraph}
             </p>
             <img className="hero-info__image hero-info__image--mobile" src={mobileImage} alt="Servicio para emprendedores"></img>
-            <button className="btn btn--primary btn--dots hero-info__button">
-              Más información
-            </button>
+            <Button
+              title='Más información'
+              linkRoute='/nosotros'
+              type='primary'
+              className='hero-info__button'
+              extra='btn--dots'
+            />
           </div>
           <div className="hero-info__right">
             <img className="hero-info__image hero-info__image--desktop" src={desktopImage} alt="Servicio para emprendedores"></img>

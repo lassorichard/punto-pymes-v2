@@ -11,7 +11,9 @@ export const Footer = () => {
     <>
       <footer className="footer">
         <div className="footer__container container">
-          <img className="footer__logo" src={Logo} alt="Logo Punto Pymes"></img>
+          <NavLink to="/">
+            <img className="footer__logo" src={Logo} alt="Logo Punto Pymes"></img>
+          </NavLink>
           <ul className="footer__us">
             <h4 className="footer__title">Nosotros</h4>
             <li className="footer__link">
@@ -21,7 +23,7 @@ export const Footer = () => {
               <NavLink to="/nosotros">Qué hacemos</NavLink>
             </li>
             <li className="footer__link">
-              <NavLink to="/como-funciona">Cómo funciona</NavLink>
+              <NavLink to="/nosotros#como-funciona">Cómo funciona</NavLink>
             </li>
           </ul>
           <ul className="footer__help">
@@ -36,10 +38,7 @@ export const Footer = () => {
           <ul className="footer__help">
             <h4 className="footer__title">Contacto</h4>
             <li className="footer__link">
-              <Link to="#">Email</Link>
-            </li>
-            <li className="footer__link">
-              <Link to="#">Whatsapp</Link>
+              Email: somospuntopymes@gmail.com
             </li>
           </ul>
           <div className="footer__social-media">

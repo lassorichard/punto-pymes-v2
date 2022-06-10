@@ -1,3 +1,4 @@
+import { Button } from "./Button"
 
 export const BlockInfo = ({ title, title2, paragraph, mobileImage, desktopImage }) => {
 
@@ -19,9 +20,12 @@ export const BlockInfo = ({ title, title2, paragraph, mobileImage, desktopImage 
             <p className="paragraph-2 block-info__content__text">
               {paragraph}
             </p>
-            <button className="btn btn--secondary  block-info__content__button">
-              Registrarme
-            </button>
+            <Button
+              title='Registrarme'
+              linkExternal='https://docs.google.com/forms/d/1onnjtCKG24APUcgJPTPoCxnBlo56D8fGi6Swlc49SBg/edit'
+              type='secondary'
+              className='block-info__content__button'
+            />
           </div>
         </div>
       </section>

@@ -85,6 +85,11 @@
         margin-bottom: 35px;
         width: 72px;
       }
+
+      &__text {
+        text-align: center;
+        white-space: nowrap;
+      }
     }
 
     &__figcaption {
